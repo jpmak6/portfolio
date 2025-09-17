@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire de Contact</title>
+    <link rel="stylesheet" href="../file_css/style.css">
+    <link rel="stylesheet" href="../file_css/formulaire.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="overlay">
+        <header class="hero-header">
+            <nav class="nav-container">
+                <div class="container">
+                    <a href="portfolio.html" class="nav-logo">
+                        <span class="logo-text">Portfolio</span>
+                    </a>
+                    <div class="nav-links">
+                        <a href="portfolio.html" class="nav-item">Accueil</a>
+                        <a href="profil.html" class="nav-item">Profil</a>
+                        <a href="projet.html" class="nav-item">Projets</a>
+                        <a href="situation_pro.html" class="nav-item">Situation pro</a>
+                        <a href="veille techno.html" class="nav-item">Veille Tech</a>
+                    </div>
+                    <button class="nav-toggle" aria-label="toggle navigation">
+                        <span class="hamburger"></span>
+                    </button>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <div class="main-wrapper">
+                <section id="contact" class="contact-section p-3">
+                    <div class="container">
+                        <h2 class="heading-2">Contact</h2>
+                        <form id="contact-form" class="contact-form">
+                            <div class="form-group">
+                                <label for="nom" class="text-body">Nom:</label>
+                                <input type="text" id="nom" name="nom" class="input-field" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email" class="text-body">Email:</label>
+                                <input type="email" id="email" name="email" class="input-field" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message" class="text-body">Message:</label>
+                                <textarea id="message" name="message" class="textarea-field" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Envoyer</button>
+                        </form>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <footer class="main-footer p-2">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-section about">
+                        <h4>À propos</h4>
+                        <p class="text-body">Développeur web passionné par la création de solutions innovantes et efficaces.</p>
+                    
+                    <div class="footer-section follow">
+                        <h4>Suivez-moi</h4>
+                        <div class="social-links">
+                            <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p class="text-body">© 2024 Mon Portfolio. Tous droits réservés.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
+    <script>
+        document.addEventListener('scroll', () => {
+            const header = document.querySelector('.hero-header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Menu hamburger pour mobile
+        const navToggle = document.querySelector('.nav-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        
+        navToggle?.addEventListener('click', () => {
+            navLinks.classList.toggle('nav-open');
+            navToggle.classList.toggle('nav-open');
+        });
+
+        // Gestion du formulaire
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Ici vous pouvez ajouter le code pour traiter le formulaire côté client
+            // Par exemple, envoyer les données via fetch à un service externe
+            alert('Message envoyé !');
+            this.reset();
+        });
+    </script>
+    <script src="../js/type.js"></script>
+</body>
+</html>

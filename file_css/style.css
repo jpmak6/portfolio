@@ -1,0 +1,446 @@
+/* Reset et styles de base */
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --accent-color: #e74c3c;
+    --light-color: #ecf0f1;
+    --dark-color: #2c3e50;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('../anex/IMG/technology-8280863_1280.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+}
+
+/* Layout classes */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.7);
+    min-height: 100vh;
+    width: 100%;
+}
+
+/* Typography System */
+.heading-1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3.5rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 1.5rem;
+}
+
+.heading-2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    font-weight: 700;
+    font-style: italic;
+    margin-bottom: 1.2rem;
+}
+
+.heading-3 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    margin-bottom: 1rem;
+}
+
+.text-body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+.text-accent {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: var(--accent-color);
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: none;
+    font-weight: 600;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.btn-secondary {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.btn-outline {
+    border: 2px solid var(--light-color);
+    color: var(--light-color);
+    background: transparent;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.btn-primary:hover {
+    background-color: var(--accent-color);
+}
+
+.btn-outline:hover {
+    background-color: var(--light-color);
+    color: var(--dark-color);
+}
+
+.btn::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: -100%;
+    background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: all 0.5s ease;
+}
+
+.btn:hover::after {
+    left: 100%;
+}
+
+/* Spacing utilities */
+.m-1 { margin: 1rem; }
+.m-2 { margin: 2rem; }
+.m-3 { margin: 3rem; }
+.p-1 { padding: 1rem; }
+.p-2 { padding: 2rem; }
+.p-3 { padding: 3rem; }
+
+/* Flex utilities */
+.flex {
+    display: flex;
+}
+
+.flex-center {
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-between {
+    justify-content: space-between;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+/* Grid utilities */
+.grid {
+    display: grid;
+    gap: 1rem;
+}
+
+.grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/* Cards */
+.card {
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    padding: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Animations */
+.fade-in {
+    animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .grid-2, .grid-3 {
+        grid-template-columns: 1fr;
+    }
+    
+    .heading-1 { font-size: 2.5rem; }
+    .heading-2 { font-size: 2rem; }
+    .heading-3 { font-size: 1.8rem; }
+}
+
+.main-footer {
+    background-color: #000000; /* Fond noir */
+    text-align: center;
+}
+
+/* ...existing code... */
+.nav-links a {
+    color: var(--light-color);
+    text-decoration: none;
+  
+}
+/* ...existing code... */
+
+/* Header sophistiqué */
+.hero-header {
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    background: linear-gradient(135deg, rgba(0,0,0,0.95) 0%, rgba(44,62,80,0.95) 100%);
+    box-shadow: 0 2px 20px rgba(0,0,0,0.3);
+    backdrop-filter: blur(10px);
+    min-height: 80px;/* Réduit la hauteur du header */
+}
+
+/* Modify nav-container padding and alignment */
+.nav-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center; /* Vertically center navigation items */
+    justify-content: space-between;
+    padding: 1.5rem 3rem; /* Increased padding for better alignment */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Ensure nav-links are properly aligned */
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    height: 100%;
+    justify-content: flex-end; /* Align links to the right */
+}
+
+.nav-item {
+    color: var(--light-color);
+    text-decoration: none;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 0 1rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.nav-item::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--accent-color);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.nav-item:hover::before,
+.nav-item.active::before {
+    transform: scaleX(1);
+}
+
+.nav-item:hover {
+    color: var(--accent-color);
+    transform: translateY(-2px);
+}
+
+/* ...existing code... */
+
+.nav-item.active {
+    color: var(--accent-color);
+    font-weight: bold;
+    position: relative;
+}
+
+.nav-item.active::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: var(--accent-color);
+    border-radius: 2px;
+}
+
+/* Animation du header au scroll */
+.hero-header.scrolled {
+    background: rgba(0,0,0,0.95);
+    padding: 0.5rem 0;
+}
+
+/* Scrollbar Customization */
+/* Styles pour le corps principal */
+body::-webkit-scrollbar {
+    width: 12px;
+}
+
+body::-webkit-scrollbar-track {
+    background: rgba(44, 62, 80, 0.1);
+    border-radius: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, var(--secondary-color), var(--accent-color));
+    border-radius: 10px;
+    border: 3px solid rgba(0, 0, 0, 0.2);
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(45deg, #2980b9, #c0392b);
+}
+
+/* Styles pour tous les éléments scrollables */
+* {
+    scrollbar-width: thin; /* Pour Firefox */
+    scrollbar-color: var(--secondary-color) rgba(44, 62, 80, 0.1); /* Pour Firefox */
+}
+
+*::-webkit-scrollbar {
+    width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+    background: rgba(44, 62, 80, 0.1);
+    border-radius: 10px;
+}
+
+*::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, var(--secondary-color), var(--accent-color));
+    border-radius: 10px;
+    border: 3px solid rgba(0, 0, 0, 0.2);
+}
+
+*::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(45deg, #2980b9, #c0392b);
+}
+
+/* ...existing code... */
+
+.btn:focus {
+    outline: 2px dashed var(--accent-color);
+    outline-offset: 3px;
+}
+
+.hero-header {
+    z-index: 1000; 
+}
+
+.contact-section {
+    z-index: 1; 
+}
+
+.nav-toggle .hamburger {
+    width: 25px;
+    height: 3px;
+    background: var(--light-color);
+    margin: 5px 0;
+    transition: all 0.3s ease;
+}
+
+.hero-header.scrolled {
+    background: rgba(0, 0, 0, 0.8); 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); 
+    transition: all 0.3s ease;
+}
+
+.nav-open {
+    display: flex !important; 
+    flex-direction: column; 
+    background: rgba(0, 0, 0, 0.9); 
+    position: absolute;
+    top: 70px; 
+    width: 100%;
+    z-index: 999;
+}
+
+main {
+    padding-top: 100px; /* Ajusté pour le nouveau header */
+    /* ...existing code... */
+}
+
+@media (max-width: 480px) {
+    .contact-section {
+        margin: 1rem 0.5rem; 
+    }  /* <- Crochet manquant ici */
+    .btn-primary {
+        font-size: 1rem; /* Ajuster la taille des boutons */
+    }
+    .heading-2 {
+        font-size: 1.8rem; /* Adapter les titres */
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        position: fixed;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background: rgba(0,0,0,0.95);
+        flex-direction: column;
+        height: auto;
+        padding: 1rem 0;
+        display: none;
+    }
+
+    .nav-item {
+        height: auto;
+        padding: 1rem 2rem;
+    }
+
+    .nav-open {
+        display: flex;
+    }
+}
+
+.text-body, .input-field, .textarea-field {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); 
+}
