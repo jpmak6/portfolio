@@ -1,4 +1,4 @@
-/* Reset et styles de base */
+/* Reset et variables */
 :root {
     --primary-color: #2c3e50;
     --secondary-color: #3498db;
@@ -6,6 +6,11 @@
     --light-color: #ecf0f1;
     --dark-color: #2c3e50;
     --logo-gradient: linear-gradient(45deg, var(--secondary-color), var(--accent-color));
+    --header-bg: linear-gradient(135deg, rgba(0,0,0,0.95) 0%, rgba(44,62,80,0.95) 100%);
+    --card-bg: rgba(255, 255, 255, 0.1);
+    --z-header: 1000;
+    --z-nav: 999;
+    --z-content: 1;
 }
 
 * {
