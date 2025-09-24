@@ -2,12 +2,10 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <me    <script src="../js/type.js"></script>
-</body>
-</html>name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Situation Professionnelle</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mes Projets</title>
     <link rel="stylesheet" href="../file_css/style.css">
-    <link rel="stylesheet" href="../file_css/situation_pro.css">
+    <link rel="stylesheet" href="../file_css/projet.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
@@ -23,8 +21,8 @@
                 <div class="nav-links">
                     <a href="portfolio.html" class="nav-item">Accueil</a>
                     <a href="profil.html" class="nav-item">Profil</a>
-                    <a href="projet.html" class="nav-item">Projets</a>
-                    <a href="situation_pro.html" class="nav-item active">Situation pro</a>
+                    <a href="projet.html" class="nav-item active">Projets</a>
+                    <a href="situation_pro.html" class="nav-item">Situation pro</a>
                     <a href="veille techno.html" class="nav-item">Veille Tech</a>
                 </div>
                 <button class="nav-toggle" aria-label="toggle navigation">
@@ -33,11 +31,69 @@
             </div>
         </nav>
     </header>
-    <h1>Mes Situations Professionnelles</h1>
+    <h1>Mes Projets</h1>
     
     <main>
-        <section class="situation-container">
-            <!-- Contenu des situations professionnelles -->
+        <section class="projects-container">
+            <div class="project-grid">
+                <!-- Projet : Serveur Web -->
+                <article class="project-card">
+                    <div class="project-image">
+                        <img src="../anex/IMG/technology-8280863_1280.jpg" alt="Serveur Web Infrastructure">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Serveur Web Infrastructure</h3>
+                        <p class="project-description">
+                            Mise en place et configuration d'un serveur web complet avec gestion de services, 
+                            sécurité renforcée et monitoring des performances.
+                        </p>
+                        
+                        <div class="project-details">
+                            <div class="project-info">
+                                <span class="project-info-item">
+                                    <i class="fas fa-calendar"></i>
+                                    2025
+                                </span>
+                                <span class="project-info-item">
+                                    <i class="fas fa-clock"></i>
+                                    3 mois
+                                </span>
+                                <span class="project-info-item">
+                                    <i class="fas fa-code-branch"></i>
+                                    Version 1.0
+                                </span>
+                            </div>
+                            
+                            <div class="project-technologies">
+                                <span class="tech-tag">Apache</span>
+                                <span class="tech-tag">Linux</span>
+                                <span class="tech-tag">PHP</span>
+                                <span class="tech-tag">MySQL</span>
+                                <span class="tech-tag">SSL/TLS</span>
+                            </div>
+
+                            <ul class="project-features">
+                                <li>Configuration serveur Apache optimisée</li>
+                                <li>Mise en place de certificats SSL</li>
+                                <li>Gestion des performances et de la sécurité</li>
+                                <li>Monitoring et logs</li>
+                            </ul>
+
+                            <div class="project-links">
+                                <a href="#" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    Voir le projet
+                                </a>
+                                <a href="#" class="project-link github-link">
+                                    <i class="fab fa-github"></i>
+                                    Code source
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <!-- Fin Projet : Serveur Web -->
+            </div>
         </section>
     </main>
 
@@ -74,6 +130,6 @@
         }
     });
 </script>
-<script src="js/script.js"></script>
+<script src="../file_js/type.js"></script>
 </body>
 </html>
