@@ -41,7 +41,7 @@
 #### 15 octobre 2025 - Correction Header fixe
 **Problème identifié:** Le header fixe couvrait le contenu en haut de page
 **Cause:** Header avec `position: fixed` sans compensation suffisante dans le contenu
-**Pages affectées:** profil.html, projet.html, situation_pro.html, formulaire.html
+**Pages affectées:** TP.html, projet.html, situation_pro.html, formulaire.html
 
 **Tentative 1 (échec):**
 - ❌ `padding-top: 100px` - Insuffisant

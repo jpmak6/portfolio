@@ -49,7 +49,7 @@ portfolio-master/
 │
 ├── file_html/             # Pages HTML
 │   ├── portfolio.html     # 🏠 Accueil
-│   ├── profil.html        # 👤 Profil
+│   ├── TP.html        # 👤 Profil
 │   ├── projet.html        # 💼 Projets
 │   ├── situation_pro.html # 🎓 Situations professionnelles
 │   ├── veille techno.html # 🔬 Veille technologique
@@ -82,7 +82,7 @@ portfolio-master/
 ## 📄 Pages disponibles
 
 1. **Accueil** (`portfolio.html`) - Présentation générale et compétences
-2. **Profil** (`profil.html`) - Parcours et objectifs professionnels
+2. **Profil** (`TP.html`) - Parcours et objectifs professionnels
 3. **Projets** (`projet.html`) - Réalisations techniques
 4. **Situations Pro** (`situation_pro.html`) - Expériences professionnelles
 5. **Veille Techno** (`veille techno.html`) - IA, informatique quantique

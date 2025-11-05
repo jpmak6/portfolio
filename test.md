@@ -46,7 +46,7 @@ portfolio-master/
 │
 ├── 📂 file_html/
 │   ├── portfolio.html          # 🏠 Page d'accueil (point d'entrée)
-│   ├── profil.html            # 👤 Présentation personnelle
+│   ├── TP.html            # 👤 Présentation personnelle
 │   ├── projet.html            # 💼 Projets réalisés
 │   ├── situation_pro.html     # 🎓 Situations professionnelles
 │   ├── veille techno.html     # 🔬 Veille technologique (IA, quantique)

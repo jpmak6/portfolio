@@ -29,7 +29,7 @@ body {
 h1 {
     font-size: clamp(1.8rem, 5vw, 2.5rem); /* Responsive: s'adapte à la taille de l'écran */
     margin-bottom: 1rem;
-    color: #790a0a;
+    color: #ffffff;
     text-align: center;
     margin-top: 100px; /* Aligne le titre sous le header fixe */
     padding: 0.5rem 1rem; /* Padding pour éviter que le texte touche les bords */
@@ -38,6 +38,14 @@ h1 {
     display: inline-block;
     width: auto;
     max-width: 100%;
+    background: rgba(0,0,0,0.45); /* semi-opaque backdrop for readability */
+    border-radius: 8px;
+    text-shadow: 0 6px 18px rgba(0,0,0,0.7);
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 0.6px;
+    padding: 0.75rem 1.25rem;
+    border: 1px solid rgba(255,255,255,0.06);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.55), inset 0 1px 0 rgba(255,255,255,0.02);
 }
 
 /* Animation de soulignement qui s'adapte à la taille du texte */
@@ -50,9 +58,35 @@ h1::after {
     width: 80%; /* S'adapte à la largeur du texte */
     max-width: 300px; /* Limite maximale */
     height: 3px;
-    background: linear-gradient(90deg, transparent, #790a0a, transparent);
-    border-radius: 2px;
-    box-shadow: 0 0 10px rgba(121, 10, 10, 0.5);
+    background: linear-gradient(90deg, transparent, #00bcd4, #8ae9ff, transparent);
+    border-radius: 3px;
+    box-shadow: 0 0 18px rgba(0, 188, 212, 0.45);
+    height: 6px;
+    transition: transform 220ms ease;
+    transform-origin: center;
+    animation: underlineShift 3.5s linear infinite;
+}
+
+/* Decorative vertical accent and label */
+h1::before {
+    content: 'VEILLE';
+    position: absolute;
+    left: -76px;
+    top: 50%;
+    transform: translateY(-50%) rotate(-90deg);
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.85);
+    background: rgba(0,0,0,0.35);
+    padding: 0.25rem 0.6rem;
+    border-radius: 4px;
+    letter-spacing: 2px;
+    border: 1px solid rgba(255,255,255,0.04);
+}
+
+@keyframes underlineShift {
+    0% { transform: scaleX(0.85) translateX(-6%); }
+    50% { transform: scaleX(1.05) translateX(6%); }
+    100% { transform: scaleX(0.85) translateX(-6%); }
 }
 
 /* Conteneur centré pour le h1 */

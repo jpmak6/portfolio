@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Veille Technologique - IA et Innovation</title>
+    <title>Veille Technologique - Windows 12</title>
     <link rel="stylesheet" href="../file_css/veille.css">
     <link rel="stylesheet" href="../file_css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
@@ -19,7 +19,7 @@
                 </a>
                 <div class="nav-links">
                     <a href="portfolio.html" class="nav-item">Accueil</a>
-                    <a href="profil.html" class="nav-item">Profil</a>
+                    <a href="TP.html" class="nav-item">TP</a>
                     <a href="projet.html" class="nav-item">Projets</a>
                     <a href="situation_pro.html" class="nav-item">Situation pro</a>
                     <a href="veille techno.html" class="nav-item active">Veille Tech</a>
@@ -31,40 +31,69 @@
         </nav>
     </header>
     <div class="container">
-        <br><br><h1>Computer science</h1>
+        <br><br><h1>Windows 12 — état du développement et points clés</h1>
 
         <div class="article">
-            <h2>Avancées Récentes en Intelligence Artificielle</h2>
-            <p>L'intelligence artificielle continue de progresser rapidement avec des innovations majeures dans plusieurs domaines :</p>
+            <h2>Vue d'ensemble</h2>
+            <p>Windows 12 est attendu comme la prochaine évolution majeure du système d'exploitation de Microsoft. Bien que les détails officiels continuent d'évoluer, les annonces et les rumeurs publiques indiquent une attention forte portée sur l'intégration de fonctionnalités d'intelligence artificielle, une modernisation de l'interface, et un renforcement de la sécurité et de la compatibilité pour environnements cloud et hybrides.</p>
+        </div>
+
+        <div class="article">
+            <h2>Améliorations attendues</h2>
             <ul>
-                <li>Développement de modèles de langage plus performants</li>
-                <li>Amélioration des capacités de traitement d'images et de vidéos</li>
-                <li>Progrès dans l'apprentissage par renforcement</li>
-                <li>Nouvelles applications dans la médecine et la recherche scientifique</li>
+                <li><strong>Intégration IA au niveau système :</strong> fonctionnalités natives d'assistance contextuelle, optimisation des performances et automatisation des tâches courantes.</li>
+                <li><strong>Expérience utilisateur modernisée :</strong> refinements UI/UX, transitions plus fluides, et adaptation pour écrans pliables et tactiles.</li>
+                <li><strong>Renforcement de la sécurité :</strong> sandboxing amélioré, protections contre les attaques sur la chaîne d'approvisionnement, et mise à jour des modèles de permissions.</li>
+                <li><strong>Interopérabilité cloud :</strong> meilleure intégration avec Azure, gestion hybride des identités, et optimisations pour les workloads virtualisés.</li>
+                <li><strong>Compatibilité et migration :</strong> outils améliorés pour la migration des applications et compatibilité descendante (containers, WSL, application legacy).</li>
+                <li><strong>Performances et efficacité énergétique :</strong> optimisations du noyau et meilleure gestion des ressources pour prolonger l'autonomie sur appareils mobiles.</li>
             </ul>
         </div>
 
         <div class="article">
-            <h2>Nouveaux Outils d'IA</h2>
-            <p>Découvrez les derniers outils d'IA qui révolutionnent différents secteurs :</p>
+            <h2>Impact pour les développeurs</h2>
+            <p>Les développeurs doivent préparer leurs applications pour tirer parti des nouvelles APIs et modèles d'exécution :</p>
             <ul>
-                <li>ChatGPT et ses nouvelles fonctionnalités</li>
-                <li>DALL-E 3 pour la génération d'images</li>
-                <li>Copilot pour l'assistance au développement</li>
-                <li>Midjourney et ses capacités artistiques</li>
+                <li>Audit des dépendances pour s'assurer de la compatibilité avec les nouvelles bibliothèques système.</li>
+                <li>Mise à jour des environnements de build pour supporter les toolchains cibles (MSBuild, .NET, etc.).</li>
+                <li>Tests sur WSL et conteneurs pour valider le comportement sur environnements Linux intégrés.</li>
+                <li>Exploitation possible d'APIs d'IA natives pour améliorer l'accessibilité et l'automatisation.</li>
             </ul>
         </div>
 
         <div class="article">
-            <h2>La Nouvelle Puce Quantique de Google</h2>
-            <p>Google a réalisé une avancée majeure dans l'informatique quantique avec sa nouvelle puce :</p>
+            <h2>Considérations sécurité et conformité</h2>
+            <p>Avec l'ajout de fonctions connectées et d'IA, la surface d'attaque peut augmenter si les protections ne sont pas correctement implémentées. Points à surveiller :</p>
             <ul>
-                <li>Processeur quantique de nouvelle génération</li>
-                <li>Réduction significative du taux d'erreur</li>
-                <li>Capacité de traitement augmentée</li>
-                <li>Applications potentielles dans la cryptographie et la simulation moléculaire</li>
+                <li>Gestion des données et respect du RGPD (où applicable) lors d'utilisation de services d'IA.</li>
+                <li>Chiffrement des communications interprocessus et stockage sécurisé des clés.</li>
+                <li>Stratégies de mise à jour sécurisées pour garantir l'intégrité des binaires.</li>
             </ul>
-            <p>Cette innovation marque une étape importante vers la suprématie quantique et ouvre de nouvelles perspectives pour le calcul haute performance.</p>
+        </div>
+
+        <div class="article">
+            <h2>Stratégie de migration pour entreprises</h2>
+            <p>Les entreprises devraient planifier :</p>
+            <ul>
+                <li>Inventaire des applications et dépendances critiques.</li>
+                <li>Phase pilote sur environnements contrôlés (VMs, lab) avant déploiement massif.</li>
+                <li>Formation des équipes IT et mise à jour des playbooks de support.</li>
+            </ul>
+        </div>
+
+        <div class="article">
+            <h2>Checklist technique rapide</h2>
+            <ol>
+                <li>Vérifier compatibilité des drivers matériels.</li>
+                <li>Mettre à jour outils CI/CD et scripts d'automatisation.</li>
+                <li>Planifier sauvegardes et rollback pour mises à jour système.</li>
+                <li>Effectuer tests de performance et stress avant production.</li>
+            </ol>
+        </div>
+
+        <div class="article">
+            <h2>Sources & suivi</h2>
+            <p>Pour rester à jour, surveillez : annonces officielles Microsoft (blogs & documentation), les notes de version Azure, et les communiqués des principaux fournisseurs de matériel. Cette page sera mise à jour régulièrement avec des liens et des résumés techniques concrets.</p>
         </div>
     </div>
     <footer class="main-footer p-2">

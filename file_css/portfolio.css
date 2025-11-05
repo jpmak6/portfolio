@@ -62,6 +62,116 @@
     border-color: var(--accent-color);
 }
 
+/* Ensure skill-card links keep the site's white color instead of browser default blue */
+.skill-card {
+    color: inherit; /* inherit white from body/parent */
+    text-decoration: none; /* remove underline */
+    display: block; /* ensure full-card clickable */
+}
+.skill-card:link,
+.skill-card:visited {
+    color: white;
+}
+.skill-card .heading-3 {
+    color: white; /* explicit for the heading inside the link */
+}
+.skill-card:hover .heading-3 {
+    color: white; /* keep white on hover (border/background changes indicate hover) */
+}
+
+/* About section styles */
+.about-card {
+    padding: 1.25rem;
+    background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02));
+    border: 1px solid rgba(255,255,255,0.06);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.45);
+    line-height: 1.6;
+}
+.about-card .text-body {
+    margin-bottom: 0.9rem;
+    color: var(--light-color);
+    font-family: 'Open Sans', sans-serif;
+}
+.heading-2 {
+    margin-bottom: 0.75rem;
+}
+
+/* Modern two-column about layout */
+.about-grid {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 1.5rem;
+    align-items: center;
+}
+.about-media {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.about-avatar {
+    width: 200px;
+    height: 200px;
+    border-radius: 14px;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    border: 1px solid rgba(255,255,255,0.06);
+    transform: translateZ(0);
+}
+.about-highlights {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    color: var(--light-color);
+    font-size: 0.95rem;
+}
+.about-highlights li {
+    padding: 0.35rem 0;
+}
+.about-main .lead {
+    font-weight: 600;
+    font-size: clamp(1rem, 1.15rem + 0.2vw, 1.1rem);
+    color: #f8f8f8;
+    margin-bottom: 0.75rem;
+}
+.about-skills {
+    margin: 0.8rem 0 1rem 0;
+    display: flex;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+}
+.skill-badge {
+    background: linear-gradient(90deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
+    color: var(--light-color);
+    padding: 0.4rem 0.7rem;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    border: 1px solid rgba(255,255,255,0.06);
+    transition: transform 180ms ease, box-shadow 180ms ease;
+}
+.skill-badge:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.45);
+}
+
+/* subtle entrance animation */
+@keyframes slideUpFade {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+.about-card { animation: slideUpFade 420ms ease both; }
+
+/* Responsive: stack on small screens */
+@media (max-width: 780px) {
+    .about-grid { grid-template-columns: 1fr; }
+    .about-avatar { width: 140px; height: 140px; margin: 0 auto; }
+    .about-media { align-items: center; text-align: center; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .about-card, .skill-badge { animation: none; transition: none; }
+}
+
 /* Footer */
 .main-footer {
     background-color: #000000; /* Fond noir */
