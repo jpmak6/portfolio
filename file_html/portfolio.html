@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Portfolio</title>
+    <link rel="stylesheet" href="../file_css/style-mobile.css">
+    <link rel="stylesheet" href="../file_css/portfolio.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Playfair+Display:ital,wght@1,700&family=Roboto:wght@600&family=Open+Sans&family=Poppins:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="overlay">
+        <header class="hero-header">
+            <nav class="nav-container">
+                <div class="container">
+                    <a href="portfolio.html" class="nav-logo">
+                        <span class="logo-text">Portfolio</span>
+                    </a>
+                    <div class="nav-links">
+                        <a href="portfolio.html" class="nav-item active">Accueil</a>
+                        <a href="TP.html" class="nav-item">TP</a>
+                        <a href="projet.html" class="nav-item">Projets</a>
+                        <a href="situation_pro.html" class="nav-item">Situation pro</a>
+                        <a href="veille techno.html" class="nav-item">Veille Tech</a>
+                    </div>
+                    <button class="nav-toggle" aria-label="toggle navigation">
+                        <span class="hamburger"></span>
+                    </button>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <section id="accueil" class="hero-section fade-in"> <!-- Ajouter la classe fade-in -->
+                <div class="container flex flex-center flex-column">
+                    <h1 class="heading-1">Bienvenue sur mon Portfolio</h1>
+                    <p class="text-accent m-2">passioné d'informatiques</p>
+                    <div class="btn-group m-2">
+                        <a href="formulaire.html" class="btn btn-outline">Me contacter</a>
+                        <a href="../anex/PDF/EBELLE JEAN-PASCA-1.pdf" class="btn btn-primary"  download="EBELLE JEAN-PASCA-1.pdf">Télécharger mon CV</a>
+                        <a href="../anex/PDF/Candidature_Stage_Ngando_Jean-Pascal.pdf" class="btn btn-primary" download="Candidature_Stage_Ngando_Jean-Pascal.pdf" >Télécharger ma Lettre</a>
+                    </div>
+                </div>
+            </section>
+
+            <section id="apropos" class="p-3">
+                <div class="container">
+                    <h2 class="heading-2">À Propos de Moi</h2>
+                    <div class="card about-card about-grid">
+                        <div class="about-media" aria-hidden="true">
+                            <div class="about-avatar" style="background-image: url('../anex/IMG/computer-2788918_1280.jpg');"></div>
+                            <ul class="about-highlights">
+                                <li><strong>Étudiant BTS SIO (SISR)</strong></li>
+                                <li><i class="fas fa-server"></i> Administration Linux • Serveurs Web</li>
+                                <li><i class="fas fa-cogs"></i> Automatisation • Sécurité • DevOps</li>
+                            </ul>
+                        </div>
+
+                        <div class="about-main">
+                            <h3 class="heading-3">Présentation</h3>
+                            <p class="text-body lead">Je m'appelle <strong>Ebelle Makongue Jeanpascal</strong>, né le 14 juin 2003. Étudiant en <strong>BTS SIO option SISR</strong>, je conçois et administre des infrastructures fiables et sécurisées, tout en développant des interfaces web modernes. J'interviens du serveur à l'interface, en mettant l'accent sur la sécurité, la maintenabilité et l'expérience utilisateur.</p>
+
+                            <h3 class="heading-3">Compétences Techniques</h3>
+                            <p class="text-body">Je maîtrise l'<strong>administration Linux (Ubuntu)</strong>, la gestion de <strong>serveurs web (Apache / Nginx)</strong>, le <strong>scripting (Bash, PowerShell)</strong>, la <strong>virtualisation</strong> et les concepts <strong>réseaux (VLANs, routage)</strong>. J'utilise des outils modernes comme <strong>Git, Docker et WordPress</strong> pour livrer des solutions professionnelles.</p>
+
+                            <div class="about-skills">
+                                <span class="skill-badge"><i class="fab fa-ubuntu"></i> Ubuntu</span>
+                                <span class="skill-badge"><i class="fab fa-wordpress"></i> WordPress</span>
+                                <span class="skill-badge"><i class="fas fa-server"></i> Nginx</span>
+                                <span class="skill-badge"><i class="fas fa-terminal"></i> Bash / PowerShell</span>
+                                <span class="skill-badge"><i class="fab fa-docker"></i> Docker</span>
+                                <span class="skill-badge"><i class="fab fa-git-alt"></i> Git</span>
+                            </div>
+
+                            <h3 class="heading-3">Approche & Objectifs</h3>
+                            <p class="text-body">Je privilégie une <strong>conception modulaire</strong>, des <strong>tests réguliers</strong> et une <strong>documentation claire</strong>. Mon objectif professionnel est d'évoluer vers des rôles d'<strong>administrateur système & réseau</strong> ou d'<strong>ingénieur DevOps</strong>, avec une montée en compétence en <strong>cybersécurité</strong> et <strong>automatisation avancée</strong>.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="competences" class="p-3">
+                <div class="container">
+                    <h2 class="heading-2">Mes Compétences</h2>
+                    <div class="grid grid-3 skills-container">
+                        <a class="skill-card card" href="TP.html#tp-ubuntu" title="Voir TP Ubuntu">
+                            <h3 class="heading-3">ubuntu</h3>
+                        </a>
+                        <a class="skill-card card" href="TP.html#tp-paquet-tracer" title="Voir TP Paquet Tracer">
+                            <h3 class="heading-3">paquet tracer</h3>
+                        </a>
+                        <a class="skill-card card" href="TP.html#tp-server-web" title="Voir TP Serveur Web">
+                            <h3 class="heading-3">server web</h3>
+                        </a>
+                        <a class="skill-card card" href="TP.html#tp-systeme" title="Voir TP Système">
+                            <h3 class="heading-3">systeme</h3>
+                        </a>
+                        <a class="skill-card card" href="TP.html#tp-powershell" title="Voir TP PowerShell">
+                            <h3 class="heading-3">powershell</h3>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Mini-profil removed: content consolidated into 'À Propos' and buttons removed as requested -->
+        </main>
+
+        <footer class="main-footer p-2">
+            <div class="container">
+                <div class="footer-content">
+                    
+                <div class="footer-section follow">
+                        <h4>Suivez-moi</h4>
+                        <div class="social-links">
+                            <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                          
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p class="text-body">© 2024 Mon Portfolio. Tous droits réservés.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    
+    <!-- Ajout du script JavaScript avant </body> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
+    <script src="../file_js/nav.js"></script>
+    <script src="../file_js/type.js"></script>
+</body>
+</html>

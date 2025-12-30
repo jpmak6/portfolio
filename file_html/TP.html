@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Profil - Ebelle Makongue Jeanpascal</title>
+    <link rel="stylesheet" href="../file_css/style-mobile.css">
+    <link rel="stylesheet" href="../file_css/profil.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="overlay">
+        <header class="hero-header">
+            <nav class="nav-container">
+                <div class="container">
+                    <a href="portfolio.html" class="nav-logo">
+                        <span class="logo-text">Portfolio</span>
+                    </a>
+                    <div class="nav-links">
+                        <a href="portfolio.html" class="nav-item">Accueil</a>
+                        <a href="TP.html" class="nav-item active">TP</a>
+                        <a href="projet.html" class="nav-item">Projets</a>
+                        <a href="situation_pro.html" class="nav-item">Situation pro</a>
+                        <a href="veille techno.html" class="nav-item">Veille Tech</a>
+                    </div>
+                    <button class="nav-toggle" aria-label="toggle navigation">
+                        <span class="hamburger"></span>
+                    </button>
+                </div>
+            </nav>
+        </header>
+
+        <!-- TP hub : listes des TP par module (déplacé depuis projet.html) -->
+        <main>
+            <section id="tp-hub" class="p-3">
+                <div class="container">
+                    <h2 class="heading-2">TPs par module</h2>
+                    <p class="text-body">Cliquez sur une compétence depuis l'accueil pour accéder directement à la zone correspondante ci‑dessous.</p>
+
+                    <article id="tp-ubuntu" class="tp-zone card m-2">
+                        <h3 class="heading-3">Ubuntu</h3>
+                        <p class="text-body">TPs liés à Ubuntu : installation, configuration d'un serveur web, gestion de paquets, scripts d'administration.</p>
+                    </article>
+
+                    <article id="tp-paquet-tracer" class="tp-zone card m-2">
+                        <h3 class="heading-3">Paquet Tracer</h3>
+                        <p class="text-body">Zone pour exercices Packet Tracer (topologies, routage, VLANs, simulation).</p>
+                    </article>
+
+                    <article id="tp-server-web" class="tp-zone card m-2">
+                        <h3 class="heading-3">Serveur Web</h3>
+                        <p class="text-body">TPs sur Apache/Nginx, déploiement d'applications, sécurité et optimisation.</p>
+                    </article>
+
+                    <article id="tp-systeme" class="tp-zone card m-2">
+                        <h3 class="heading-3">Système</h3>
+                        <p class="text-body">TP administration système : utilisateurs, services, sauvegardes, monitoring.</p>
+                    </article>
+
+                    <article id="tp-powershell" class="tp-zone card m-2">
+                        <h3 class="heading-3">PowerShell</h3>
+                        <p class="text-body">Scripts PowerShell et automatisation pour administration Windows.</p>
+                    </article>
+                </div>
+            </section>
+        </main>
+
+        <footer class="main-footer p-2">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-section about">
+                        <h4>À propos</h4>
+                    
+                    <div class="footer-section follow">
+                        <h4>Suivez-moi</h4>
+                        <div class="social-links">
+                            <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p class="text-body">© 2024 Mon Portfolio. Tous droits réservés.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
+    <script src="../file_js/nav.js"></script>
+    <script src="../file_js/type.js"></script>
+</body>
+</html>

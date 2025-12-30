@@ -1,0 +1,222 @@
+/* =============================================
+   PROJET.CSS - VERSION MOBILE-FIRST
+   ============================================= */
+:root {
+    --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    --card-bg: rgba(255, 255, 255, 0.1);
+    --card-hover-transform: translateY(-5px);
+    --tag-bg: rgba(52, 152, 219, 0.8);
+}
+
+/* Compensation header fixe - MOBILE */
+main {
+    padding-top: calc(var(--header-height-mobile) + 1rem);
+    min-height: calc(100vh - var(--header-height-mobile));
+}
+
+@media (min-width: 768px) {
+    main {
+        padding-top: calc(var(--header-height-mobile) + 2rem);
+    }
+}
+
+h1 {
+    padding-top: 0;
+    margin-top: 0;
+    text-align: center;
+}
+
+/* Container projets - Mobile First */
+.projects-container {
+    padding: 1.5rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+    .projects-container {
+        padding: 2rem;
+    }
+}
+
+/* Grille projets - Responsive */
+.project-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* 1 colonne sur mobile */
+    gap: 1.5rem;
+    padding: 1.5rem 0;
+}
+
+/* 2 colonnes sur tablettes */
+@media (min-width: 600px) {
+    .project-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+}
+
+/* 3 colonnes sur desktop */
+@media (min-width: 1024px) {
+    .project-grid {
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    }
+}
+
+/* Carte projet - Mobile Optimisée */
+.project-card {
+    background: var(--card-bg);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.project-card:active {
+    transform: scale(0.98);
+}
+
+.project-card:hover {
+    transform: var(--card-hover-transform);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Image projet */
+.project-image {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+@media (min-width: 768px) {
+    .project-image {
+        height: 220px;
+    }
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+.project-card:hover .project-image img {
+    transform: scale(1.05);
+}
+
+.project-content {
+    padding: 1.5rem;
+}
+
+.project-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--light-color);
+    font-family: 'Playfair Display', serif;
+}
+
+.project-description {
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    font-family: 'Poppins', sans-serif;
+}
+
+.project-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.project-info-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.9rem;
+}
+
+.project-technologies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.tech-tag {
+    background: var(--tag-bg);
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.85rem;
+    backdrop-filter: blur(5px);
+}
+
+.project-features {
+    list-style: none;
+    margin-bottom: 1.5rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.project-features li {
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.project-features li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--secondary-color);
+}
+
+.project-links {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.project-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.7rem 1.2rem;
+    background: var(--secondary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.project-link:hover {
+    background: var(--accent-color);
+    transform: translateY(-2px);
+}
+
+.github-link {
+    background: #24292e;
+}
+
+.github-link:hover {
+    background: #1a1e22;
+}
+
+@media (max-width: 768px) {
+    .projects-container {
+        padding: 1rem;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .project-card {
+        margin: 0 1rem;
+    }
+}
