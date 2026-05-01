@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mes Projets Personnels — Portfolio BTS SIO SISR</title>
+    <link rel="stylesheet" href="../file_css/style-mobile.css">
+    <link rel="stylesheet" href="../file_css/projet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="overlay">
+    <header class="hero-header">
+        <nav class="nav-container">
+            <div class="container">
+                <a href="portfolio.html" class="nav-logo">
+                    <span class="logo-text">Portfolio</span>
+                </a>
+                <div class="nav-links">
+                    <a href="portfolio.html" class="nav-item">Accueil</a>
+                    <a href="TP.html" class="nav-item">TP</a>
+                    <a href="infrastructure_reseau.html" class="nav-item">Infrastructure Réseau</a>
+                    <a href="projet.html" class="nav-item active">Projets</a>
+                    <a href="situation_pro.html" class="nav-item">Situation pro</a>
+                    <a href="veille techno.html" class="nav-item">Veille Tech</a>
+                </div>
+                <button class="nav-toggle" aria-label="toggle navigation">
+                    <span class="hamburger"></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+    
+    <main>
+        <h1>Mes Projets Personnels</h1>
+        
+        <!-- Système de filtrage -->
+        <div class="filter-container">
+            <button data-filter="all" class="active">Tous les projets</button>
+            <button data-filter="ai">Intelligence Artificielle</button>
+            <button data-filter="system">Systèmes</button>
+            <button data-filter="network">Réseau</button>
+            <button data-filter="dev">Développement</button>
+        </div>
+
+        <section class="projects-container">
+            <div class="project-grid">
+                
+                <!-- PROJET 1: LOVABLE MOTIVATION APP -->
+                <article class="project-card" data-category="ai">
+                    <div class="project-image">
+                        <img src="../anex/IMG/img projet/(p1).jpg" alt="Soldier - Motivation App">
+                        <span class="project-badge">IA/Web</span>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Soldier 🎖️</h3>
+                        <p class="project-description">
+                            Site web d'auto-motivation assisté par IA. Système de récompenses quantifiées, gamification progressive et analytics détaillées pour valoriser vos efforts et suivre votre progression.
+                        </p>
+                        
+                        <div class="project-details">
+                            <div class="project-info">
+                                <span class="project-info-item">
+                                    <i class="fas fa-calendar"></i>
+                                    2024-2025
+                                </span>
+                                <span class="project-info-item">
+                                    <i class="fas fa-rocket"></i>
+                                    En production
+                                </span>
+                                <span class="project-info-item">
+                                    <i class="fas fa-lightbulb"></i>
+                                    Perso
+                                </span>
+                            </div>
+                            
+                            <div class="project-technologies">
+                                <span class="tech-tag">Lovable AI</span>
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">API REST</span>
+                                <span class="tech-tag">Analytics</span>
+                                <span class="tech-tag">Gamification</span>
+                            </div>
+
+                            <ul class="project-features">
+                                <li>Génération de récompenses par IA</li>
+                                <li>Quantification des efforts et des progès</li>
+                                <li>Panel d'outils d'analyse statistique</li>
+                                <li>Système de badges et achievements</li>
+                                <li>Suivi des performances en temps réel</li>
+                            </ul>
+
+                            <div class="project-links">
+                                <a href="https://preview--soldier.lovable.app/gift" target="_blank" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i> Visiter le site
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- PROJET 2: HACKINTOSH -->
+                <article class="project-card" data-category="system">
+                    <div class="project-image">
+                        <img src="../anex/IMG/img projet/(p2).jpg" alt="Hackintosh Build">
+                        <span class="project-badge">Système</span>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Hackintosh PC</h3>
+                        <p class="project-description">
+                            Projet de virtualisation et personnalisation système. Création d'une build complète macOS sur matériel non-Apple avec optimisation des performances et gestion des drivers complexes.
+                        </p>
+                        
+                        <div class="project-details">
+                            <div class="project-info">
+                                <span class="project-info-item">
+                                    <i class="fas fa-calendar"></i>
+                                    2024
+                                </span>
+                                <span class="project-info-item">
+                                    <i class="fas fa-cog"></i>
+                                    Avancé
+                                </span>
+                                <span class="project-info-item">
+                                    <i class="fas fa-lightbulb"></i>
+                                    Apprentissage
+                                </span>
+                            </div>
+                            
+                            <div class="project-technologies">
+                                <span class="tech-tag">macOS</span>
+                                <span class="tech-tag">UEFI/BIOS</span>
+                                <span class="tech-tag">OpenCore</span>
+                                <span class="tech-tag">Drivers</span>
+                                <span class="tech-tag">VM</span>
+                            </div>
+
+                            <ul class="project-features">
+                                <li>Installation macOS sur matériel generic</li>
+                                <li>Configuration bootloader OpenCore</li>
+                                <li>Gestion avancée des drivers système</li>
+                                <li>Optimisation des performances matériel</li>
+                                <li>Debugging et résolution de problèmes complexes</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- PROJET 3: DOCKER LAN NETWORK -->
+                <article class="project-card" data-category="network">
+                    <div class="project-image">
+                        <img src="../anex/IMG/img projet/(p3).png" alt="Docker Network Architecture">
+                        <span class="project-badge">Réseau</span>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">LAN avec Docker</h3>
+                        <p class="project-description">
+                            Création d'un réseau LAN complet utilisant uniquement des conteneurs Docker. Infrastructure virtuelle avec Services variés, networking avancé et orchestration personnalisée.
+                        </p>
+                        
+                        <div class="project-details">
+                            <div class="project-info">
+                                <span class="project-info-item">
+                                    <i class="fas fa-calendar"></i>
+                                    2024
+                                </span>
+                                <span class="project-info-item">
+                                    <i class="fas fa-network-wired"></i>
+                                    Production
+                                </span>
+                                <span class="project-info-item">
+                                    <i class="fas fa-lightbulb"></i>
+                                    POC
+                                </span>
+                            </div>
+                            
+                            <div class="project-technologies">
+                                <span class="tech-tag">Docker</span>
+                                <span class="tech-tag">Docker Compose</span>
+                                <span class="tech-tag">Networking</span>
+                                <span class="tech-tag">Dockerfile</span>
+                                <span class="tech-tag">Linux</span>
+                            </div>
+
+                            <ul class="project-features">
+                                <li>Architecture multi-conteneurs personnalisée</li>
+                                <li>Configuration réseau avancée (bridging, overlay)</li>
+                                <li>Dockerfiles optimisés pour chaque service</li>
+                                <li>Orchestration avec Docker Compose</li>
+                                <li>Déploiement sur Docker Desktop</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- PROJET 4: NIX PACKAGE MANAGER -->
+                <article class="project-card" data-category="dev">
+                    <div class="project-image">
+                        <img src="../anex/IMG/img projet/(p4).jpg" alt="Nix Configuration">
+                        <span class="project-badge">Configuration</span>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Nix Package Manager</h3>
+                        <p class="project-description">
+                            Configuration d'environnements de travail reproducibles avec Nix sur Replit. Compréhension approfondie de l'OS, cross-platform et gestion fine des dépendances système complexes.
+                        </p>
+                        
+                        <div class="project-details">
+                            <div class="project-info">
+                                <span class="project-info-item">
+                                    <i class="fas fa-calendar"></i>
+                                    2024-2025
+                                </span>
+                                <span class="project-info-item">
+                                    <i class="fas fa-cube"></i>
+                                    Cloud
+                                </span>
+                                <span class="project-info-item">
+                                    <i class="fas fa-lightbulb"></i>
+                                    Expert
+                                </span>
+                            </div>
+                            
+                            <div class="project-technologies">
+                                <span class="tech-tag">Nix</span>
+                                <span class="tech-tag">Replit</span>
+                                <span class="tech-tag">Linux</span>
+                                <span class="tech-tag">Cross-platform</span>
+                                <span class="tech-tag">Reproducible</span>
+                            </div>
+
+                            <ul class="project-features">
+                                <li>Configuration personnalisée des environnements Nix</li>
+                                <li>Compréhension approfondie du système d'exploitation</li>
+                                <li>Gestion cross-platform Linux/Windows</li>
+                                <li>Résolution de complications système complexes</li>
+                                <li>Environnements entièrement reproducibles et portables</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- PROJET 5: QT WINDOWS APPLICATIONS -->
+                <article class="project-card" data-category="dev">
+                    <div class="project-image">
+                        <img src="../anex/IMG/img projet/(p5).jpg" alt="Qt GUI Application">
+                        <span class="project-badge">Desktop</span>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Applications Qt</h3>
+                        <p class="project-description">
+                            Développement d'applications Windows natives avec la bibliothèque Qt. Création d'interfaces utilisateur modernes, gestion d'événements et intégration système complète.
+                        </p>
+                        
+                        <div class="project-details">
+                            <div class="project-info">
+                                <span class="project-info-item">
+                                    <i class="fas fa-calendar"></i>
+                                    2024
+                                </span>
+                                <span class="project-info-item">
+                                    <i class="fas fa-window-maximize"></i>
+                                    Desktop
+                                </span>
+                                <span class="project-info-item">
+                                    <i class="fas fa-lightbulb"></i>
+                                    Intermédiaire
+                                </span>
+                            </div>
+                            
+                            <div class="project-technologies">
+                                <span class="tech-tag">Qt Framework</span>
+                                <span class="tech-tag">C++</span>
+                                <span class="tech-tag">GUI</span>
+                                <span class="tech-tag">Windows API</span>
+                                <span class="tech-tag">Visual Studio</span>
+                            </div>
+
+                            <ul class="project-features">
+                                <li>Création d'interfaces GUI intuitives et modernes</li>
+                                <li>Gestion avancée des signaux et slots Qt</li>
+                                <li>Intégration système Windows complète</li>
+                                <li>Compilation et déploiement optimisé</li>
+                                <li>Applications desktop performantes et scalables</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- SHOWCASE BUTTON FOR LOVABLE PROJECT -->
+        <div class="showcase-container">
+            <button class="showcase-btn">🚀 Visiter Soldier (IA Motivation)</button>
+        </div>
+
+    </main>
+
+    <footer class="main-footer p-2">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section about">
+                    <h4>À propos</h4>
+                
+                <div class="footer-section follow">
+                    <h4>Suivez-moi</h4>
+                    <div class="social-links">
+                        <a href="https://github.com/jpmak6" class="social-link" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/jean-makongue-a13b42223" class="social-link" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="text-body">© 2024 Mon Portfolio. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
+<script src="../file_js/nav.js"></script>
+<script src="../file_js/projet.js"></script>
+</body>
+</html>

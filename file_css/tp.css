@@ -1,0 +1,349 @@
+/* =============================================
+   TP.CSS - PAGE TRAVAUX PRATIQUES PROFESSIONNELLE
+   ============================================= */
+
+/* Compensation header fixe */
+main {
+    padding-top: calc(var(--header-height-mobile) + 1rem);
+    min-height: calc(100vh - var(--header-height-mobile));
+}
+
+@media (min-width: 768px) {
+    main {
+        padding-top: calc(var(--header-height-mobile) + 2rem);
+    }
+}
+
+/* Section header */
+#tp-hub {
+    padding: 2rem 1rem;
+}
+
+@media (min-width: 768px) {
+    #tp-hub {
+        padding: 3rem 2rem;
+    }
+}
+
+#tp-hub h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(1.8rem, 5vw, 3rem);
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, var(--secondary-color), var(--accent-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+#tp-hub > .container > .text-body {
+    font-size: clamp(0.95rem, 2.5vw, 1.1rem);
+    color: rgba(236, 240, 241, 0.85);
+    margin-bottom: 2.5rem;
+    max-width: 600px;
+}
+
+/* Conteneur des TPs */
+.tp-zones-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    grid-auto-rows: minmax(auto, max-content);
+}
+
+@media (min-width: 680px) {
+    .tp-zones-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .tp-zones-container {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+}
+
+/* Carte TP - Style professionnel */
+.tp-zone {
+    background: rgba(255, 255, 255, 0.08) !important;
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    padding: 2rem !important;
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+/* Pseudo-élément pour effet de border au hover */
+.tp-zone::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--accent-color), transparent);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.tp-zone::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(52, 152, 219, 0.1) 0%, transparent 80%);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.tp-zone:hover {
+    transform: translateY(-8px);
+    border-color: rgba(255, 255, 255, 0.25) !important;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.tp-zone:hover::before {
+    opacity: 1;
+}
+
+.tp-zone:hover::after {
+    opacity: 1;
+}
+
+/* Typographie dans les cartes */
+.tp-zone h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(1.3rem, 4vw, 1.6rem);
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 1;
+    transition: color 0.3s ease;
+}
+
+.tp-zone:hover h3 {
+    color: var(--accent-color);
+}
+
+.tp-zone p {
+    font-size: clamp(0.9rem, 2vw, 1rem);
+    color: rgba(236, 240, 241, 0.8);
+    line-height: 1.7;
+    position: relative;
+    z-index: 1;
+    transition: color 0.3s ease;
+}
+
+.tp-zone:hover p {
+    color: rgba(236, 240, 241, 1);
+}
+
+/* Indicateur d'accès */
+.tp-zone::after {
+    content: '→';
+    position: absolute;
+    right: 1.5rem;
+    bottom: 1.5rem;
+    font-size: 1.8rem;
+    color: var(--accent-color);
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    z-index: 2;
+}
+
+.tp-zone:hover::after {
+    opacity: 1;
+    transform: translateX(0);
+    content: '→';
+}
+
+/* Responsive mobile */
+@media screen and (max-width: 768px) {
+    .tp-zone {
+        padding: 1.5rem !important;
+    }
+
+    .tp-zone h3 {
+        font-size: 1.2rem;
+    }
+
+    #tp-hub h2 {
+        font-size: 1.8rem;
+        margin-bottom: 0.8rem;
+    }
+}
+
+/* Accent color on cards */
+.tp-zone.highlight {
+    border-color: var(--accent-color) !important;
+    background: rgba(231, 76, 60, 0.08) !important;
+}
+
+.tp-zone.highlight:hover {
+    box-shadow: 0 20px 50px rgba(231, 76, 60, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+/* ============= LIEN VERS DOCUMENTS ============= */
+.tp-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 1rem 0;
+    padding: 0.7rem 1rem;
+    background: rgba(52, 152, 219, 0.15);
+    border: 1px solid var(--secondary-color);
+    border-radius: 6px;
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+}
+
+.tp-link:hover {
+    background: rgba(52, 152, 219, 0.3);
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+    transform: translateX(5px);
+    box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+}
+
+.tp-link i {
+    font-size: 0.8rem;
+}
+
+/* ============= DÉTAILS DES TPs ============= */
+.tp-details {
+    margin-top: 1.2rem;
+    cursor: pointer;
+}
+
+.tp-summary {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--secondary-color);
+    padding: 0.6rem 0;
+    transition: color 0.3s ease;
+    user-select: none;
+    list-style: none;
+}
+
+.tp-summary::-webkit-details-marker {
+    display: none;
+}
+
+.tp-summary::before {
+    content: '▶ ';
+    display: inline-block;
+    margin-right: 0.5rem;
+    transition: transform 0.3s ease;
+    color: var(--accent-color);
+}
+
+.tp-details[open] .tp-summary::before {
+    transform: rotate(90deg);
+}
+
+.tp-summary:hover {
+    color: var(--accent-color);
+}
+
+.tp-content {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: rgba(52, 152, 219, 0.08);
+    border-left: 3px solid var(--secondary-color);
+    border-radius: 6px;
+    animation: slideDown 0.3s ease;
+    max-height: 280px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--secondary-color) transparent;
+}
+
+.tp-content::-webkit-scrollbar {
+    width: 6px;
+}
+
+.tp-content::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.tp-content::-webkit-scrollbar-thumb {
+    background: var(--secondary-color);
+    border-radius: 3px;
+}
+
+.tp-content::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-color);
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.tp-content h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--accent-color);
+    margin-top: 0.8rem;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.tp-content h4:first-child {
+    margin-top: 0;
+}
+
+.tp-list {
+    list-style: none;
+    padding: 0;
+    margin: 0.5rem 0 1rem;
+}
+
+.tp-list li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    color: rgba(236, 240, 241, 0.9);
+    line-height: 1.5;
+}
+
+.tp-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+.tp-content p {
+    font-size: 0.85rem;
+    color: rgba(236, 240, 241, 0.85);
+    line-height: 1.6;
+    margin-top: 0.5rem;
+}

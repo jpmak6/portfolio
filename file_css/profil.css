@@ -1,0 +1,232 @@
+/* =============================================
+   PROFIL.CSS - VERSION MOBILE-FIRST
+   ============================================= */
+
+/* Animations pour cartes TP */
+@keyframes cardFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+
+@keyframes borderGlow {
+    0%, 100% { border-color: rgba(255, 255, 255, 0.2); }
+    50% { border-color: var(--accent-color); }
+}
+
+@keyframes pulseGlow {
+    0%, 100% { box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); }
+    50% { box-shadow: 0 8px 30px rgba(52, 152, 219, 0.5), 0 0 40px rgba(231, 76, 60, 0.3); }
+}
+
+/* Compensation header fixe - MOBILE */
+main {
+    padding-top: calc(var(--header-height-mobile) + 1rem);
+    min-height: calc(100vh - var(--header-height-mobile));
+}
+
+/* =============================================
+   SECTIONS PROFIL - RESPONSIVE
+   ============================================= */
+.profile-section,
+.parcours-section,
+.objectifs-section,
+.competences-section {
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 12px;
+    padding: 1.5rem 1rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.profile-section::before,
+.parcours-section::before,
+.objectifs-section::before,
+.competences-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, var(--secondary-color), var(--accent-color));
+    transition: left 0.6s ease;
+}
+
+.profile-section:hover,
+.parcours-section:hover,
+.objectifs-section:hover,
+.competences-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 35px rgba(52, 152, 219, 0.4), 0 0 20px rgba(231, 76, 60, 0.2);
+    border: 1px solid rgba(52, 152, 219, 0.3);
+}
+
+.profile-section:hover::before,
+.parcours-section:hover::before,
+.objectifs-section:hover::before,
+.competences-section:hover::before {
+    left: 100%;
+}
+
+/* Cartes TP avec animations spéciales */
+.tp-zone {
+    position: relative;
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.tp-zone::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: radial-gradient(circle, rgba(52,152,219,0.2), transparent);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s ease, height 0.6s ease;
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.tp-zone:hover {
+    animation: cardFloat 2s ease-in-out infinite;
+    border-color: var(--accent-color);
+    box-shadow: 0 15px 40px rgba(52, 152, 219, 0.5), 0 0 30px rgba(231, 76, 60, 0.3);
+    background: rgba(0, 0, 0, 0.85);
+}
+
+.tp-zone:hover::after {
+    width: 400px;
+    height: 400px;
+}
+
+.tp-zone h3 {
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+
+.tp-zone:hover h3 {
+    color: var(--secondary-color);
+    transform: scale(1.05);
+    text-shadow: 0 0 10px rgba(52, 152, 219, 0.6);
+}
+
+.tp-zone p {
+    position: relative;
+    z-index: 1;
+}
+
+/* Padding augmenté sur desktop */
+@media (min-width: 768px) {
+    main {
+        padding-top: calc(var(--header-height-mobile) + 2rem);
+    }
+    
+    .profile-section,
+    .parcours-section,
+    .objectifs-section,
+    .competences-section {
+        padding: 2rem 2.5rem;
+    }
+}
+
+/* Titres sections */
+.profile-section h2,
+.parcours-section h2,
+.objectifs-section h2,
+.competences-section h2 {
+    color: var(--light-color);
+    border-bottom: 3px solid var(--accent-color);
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    font-size: clamp(1.3rem, 5vw, 2rem);
+}
+
+/* =============================================
+   LISTE COMPÉTENCES - MOBILE OPTIMISÉE
+   ============================================= */
+.skills-list {
+    list-style: none;
+    padding-left: 0;
+    display: grid;
+    gap: 0.75rem;
+}
+
+.skills-list li {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1rem 1.2rem;
+    border-radius: 8px;
+    border-left: 4px solid var(--accent-color);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    font-size: clamp(0.95rem, 3vw, 1.05rem);
+    position: relative;
+    overflow: hidden;
+}
+
+.skills-list li::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -50px;
+    width: 50px;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2));
+    transform: skewX(-20deg);
+    transition: right 0.5s ease;
+}
+
+.skills-list li:active {
+    transform: scale(0.98);
+}
+
+.skills-list li:hover {
+    background: linear-gradient(135deg, rgba(52, 152, 219, 0.2), rgba(231, 76, 60, 0.2));
+    transform: translateX(12px) scale(1.02);
+    box-shadow: 0 6px 20px rgba(231, 76, 60, 0.5), -4px 0 15px rgba(52, 152, 219, 0.3);
+    border-left-width: 6px;
+}
+
+.skills-list li:hover::after {
+    right: 120%;
+}
+
+/* Icônes compétences */
+.skills-list li::before {
+    content: '✔️';
+    margin-right: 0.75rem;
+    font-size: 1.1rem;
+}
+
+/* Desktop: 2 colonnes */
+@media (min-width: 768px) {
+    .skills-list {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+}
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .profile-section,
+    .parcours-section,
+    .objectifs-section,
+    .competences-section {
+        padding: 1rem;
+    }
+
+    .skills-list li {
+        font-size: 1rem;
+    }
+}
+
+.main-footer {
+    background-color: #000000; /* Fond noir */
+    text-align: center;
+}
+

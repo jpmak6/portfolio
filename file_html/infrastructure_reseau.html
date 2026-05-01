@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infrastructure Réseau — Portfolio BTS SIO SISR</title>
+    <link rel="stylesheet" href="../file_css/style-mobile.css">
+    <link rel="stylesheet" href="../file_css/infrastructure_reseau.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="overlay">
+    <header class="hero-header">
+        <nav class="nav-container">
+            <div class="container">
+                <a href="portfolio.html" class="nav-logo">
+                    <span class="logo-text">Portfolio</span>
+                </a>
+                <div class="nav-links">
+                    <a href="portfolio.html" class="nav-item">Accueil</a>
+                    <a href="TP.html" class="nav-item">TP</a>
+                    <a href="infrastructure_reseau.html" class="nav-item active">Infrastructure Réseau</a>
+                    <a href="projet.html" class="nav-item">Projets</a>
+                    <a href="situation_pro.html" class="nav-item">Situation pro</a>
+                    <a href="veille techno.html" class="nav-item">Veille Tech</a>
+                </div>
+                <button class="nav-toggle" aria-label="toggle navigation">
+                    <span class="hamburger"></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <h1 class="heading-1">Infrastructure Réseau</h1>
+
+            <!-- Intro -->
+            <section class="infra-intro">
+                <h2>Déploiement complet d'une infrastructure réseau</h2>
+                <p>
+                    Conception et mise en place d'une infrastructure réseau d'entreprise virtualisée sur Proxmox.
+                    Deux situations professionnelles couvrant l'administration système, la supervision proactive,
+                    et la gestion complète du parc informatique d'une entreprise fictive.
+                </p>
+                <div class="infra-meta">
+                    <div class="meta-item">
+                        <span class="meta-label">Candidat</span>
+                        <span class="meta-value">Ebelle Makongue N. Jean-Pascal</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Établissement</span>
+                        <span class="meta-value">Lycée Saint-Rémi, Amiens</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Environnement</span>
+                        <span class="meta-value">Proxmox VE → VMware</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Entreprise fictive</span>
+                        <span class="meta-value">TechNova Solutions</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Situations -->
+            <section>
+                <h2 class="section-title">Les deux situations</h2>
+
+                <div class="situations-grid">
+                    <article class="sit-card s1">
+                        <span class="sit-tag">Situation 1 — Administration réseau</span>
+                        <h3 class="sit-title">Infrastructure réseau interne</h3>
+                        <p class="sit-context">pfSense · Active Directory · DNS · DHCP · GPO</p>
+                        <p class="sit-desc">
+                            Mise en place de l'infrastructure complète de TechNova Solutions :
+                            pare-feu pfSense assurant le routage entre la DMZ et le LAN utilisateurs,
+                            domaine Active Directory centralisé, services DNS et DHCP, et stratégies
+                            de groupe déployées sur les postes.
+                        </p>
+                        <ul class="sit-tasks">
+                            <li>pfSense — 3 interfaces, NAT, routage inter-VLAN, DHCP sur 2 zones</li>
+                            <li>Windows Server — Active Directory, domaine technova.local</li>
+                            <li>DNS intégré à l'AD, zones directe et inverse</li>
+                            <li>Jonction du client Windows au domaine</li>
+                            <li>3 GPO : sécurité, bureau, lecteur réseau partagé</li>
+                        </ul>
+                    </article>
+
+                    <article class="sit-card s2">
+                        <span class="sit-tag">Situation 2 — Supervision réseau</span>
+                        <h3 class="sit-title">Supervision avec Zabbix</h3>
+                        <p class="sit-context">Zabbix Server · Agents · Triggers · Dashboard</p>
+                        <p class="sit-desc">
+                            Déploiement d'une solution de supervision proactive sur une VM Debian
+                            dédiée. Surveillance en temps réel de l'ensemble du parc via l'interface
+                            web Zabbix — aucune ligne de commande pour l'administration courante.
+                        </p>
+                        <ul class="sit-tasks">
+                            <li>VM Debian 12 dédiée — Zabbix Server + MariaDB + Apache</li>
+                            <li>4 hôtes supervisés : Windows Server, Debian DNS, Client, pfSense</li>
+                            <li>Agents Zabbix sur Windows (MSI) et Debian</li>
+                            <li>Triggers : CPU, RAM, disque, disponibilité</li>
+                            <li>Dashboard personnalisé — test de panne validé</li>
+                        </ul>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Stack technique -->
+            <section>
+                <h2 class="section-title">Stack technique</h2>
+
+                <div class="stack-container">
+                    <div class="stack-item">
+                        <span class="stack-role">Pare-feu / Routeur</span>
+                        <span class="stack-name">pfSense</span>
+                        <span class="stack-ip">WAN 192.168.28.33</span>
+                    </div>
+                    <div class="stack-item">
+                        <span class="stack-role">AD / DNS / DHCP</span>
+                        <span class="stack-name">Windows Server 2022</span>
+                        <span class="stack-ip">192.168.1.10</span>
+                    </div>
+                    <div class="stack-item">
+                        <span class="stack-role">DNS secondaire</span>
+                        <span class="stack-name">Debian 12</span>
+                        <span class="stack-ip">192.168.1.40</span>
+                    </div>
+                    <div class="stack-item">
+                        <span class="stack-role">Poste utilisateur</span>
+                        <span class="stack-name">Client Windows</span>
+                        <span class="stack-ip">192.168.2.x (DHCP)</span>
+                    </div>
+                    <div class="stack-item">
+                        <span class="stack-role">Supervision (Docker)</span>
+                        <span class="stack-name">Zabbix 7.x</span>
+                        <span class="stack-ip">Conteneurs : Server + DB</span>
+                    </div>
+                    <div class="stack-item">
+                        <span class="stack-role">Hyperviseur</span>
+                        <span class="stack-name">Proxmox VE</span>
+                        <span class="stack-ip">→ Migration VMware</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Compétences -->
+            <section>
+                <h2 class="section-title">Compétences couvertes</h2>
+
+                <div class="comp-grid">
+                    <article class="comp-card s1-c">
+                        <span class="comp-code">C1.3 · S1</span>
+                        <h3 class="comp-title">Conception d'infrastructure</h3>
+                        <p class="comp-desc">Segmentation DMZ / LAN, plan d'adressage, choix des services</p>
+                    </article>
+                    <article class="comp-card s1-c">
+                        <span class="comp-code">C2.1 · S1</span>
+                        <h3 class="comp-title">Installation et configuration</h3>
+                        <p class="comp-desc">pfSense, AD DS, DNS, DHCP, GPO déployés et configurés</p>
+                    </article>
+                    <article class="comp-card s1-c">
+                        <span class="comp-code">C2.3 · S1</span>
+                        <h3 class="comp-title">Déploiement</h3>
+                        <p class="comp-desc">Migration Proxmox → VMware via export OVF, validation complète</p>
+                    </article>
+                    <article class="comp-card s2-c">
+                        <span class="comp-code">C3.2 · S2</span>
+                        <h3 class="comp-title">Supervision</h3>
+                        <p class="comp-desc">Zabbix, agents, triggers, dashboard — surveillance temps réel</p>
+                    </article>
+                    <article class="comp-card s2-c">
+                        <span class="comp-code">C3.3 · S2</span>
+                        <h3 class="comp-title">Diagnostic et résolution</h3>
+                        <p class="comp-desc">Alertes automatiques, simulation de panne, analyse des incidents</p>
+                    </article>
+                    <article class="comp-card both">
+                        <span class="comp-code">C2.2 · S1+S2</span>
+                        <h3 class="comp-title">Tests et validation</h3>
+                        <p class="comp-desc">Ping, gpresult, connexion domaine, tests de charge Zabbix</p>
+                    </article>
+                </div>
+            </section>
+        </div>
+    </main>
+</div>
+
+<script src="../file_js/nav.js"></script>
+<script src="../file_js/type.js"></script>
+</body>
+</html>

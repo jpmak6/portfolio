@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travaux Pratiques — Portfolio BTS SIO SISR</title>
+    <link rel="stylesheet" href="../file_css/style-mobile.css">
+    <link rel="stylesheet" href="../file_css/tp.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="overlay">
+        <header class="hero-header">
+            <nav class="nav-container">
+                <div class="container">
+                    <a href="portfolio.html" class="nav-logo">
+                        <span class="logo-text">Portfolio</span>
+                    </a>
+                    <div class="nav-links">
+                        <a href="portfolio.html" class="nav-item">Accueil</a>
+                        <a href="TP.html" class="nav-item active">TP</a>
+                        <a href="infrastructure_reseau.html" class="nav-item">Infrastructure Réseau</a>
+                        <a href="projet.html" class="nav-item">Projets</a>
+                        <a href="situation_pro.html" class="nav-item">Situation pro</a>
+                        <a href="veille techno.html" class="nav-item">Veille Tech</a>
+                    </div>
+                    <button class="nav-toggle" aria-label="toggle navigation">
+                        <span class="hamburger"></span>
+                    </button>
+                </div>
+            </nav>
+        </header>
+
+        <!-- TP Hub -->
+        <main>
+            <section id="tp-hub" class="p-3">
+                <div class="container">
+                    <h2 class="heading-2">Travaux Pratiques BTS SIO SISR</h2>
+                    <p class="text-body">Ensemble des travaux pratiques réalisés durant la formation couvrant les domaines de l'administration réseau, des systèmes, et de la supervision. Consultez les détails de chaque TP pour découvrir les objectifs, compétences couvertes et technologies utilisées.</p>
+
+                    <div class="tp-zones-container">
+                        <!-- TP 1 : ADD -->
+                        <article class="tp-zone card" id="tp-add">
+                            <h3 class="heading-3">Active Directory</h3>
+                            <p class="text-body">Configuration complète d'un domaine Active Directory : création d'utilisateurs, gestion des groupes, politiques de groupe et contrôle d'accès réseau.</p>
+                            <a href="../anex/PDF/TP_Active_DIrectory_GPO.pdf" target="_blank" class="tp-link" title="Ouvrir le document">
+                                <i class="fas fa-external-link-alt"></i> Voir le document
+                            </a>
+                            <details class="tp-details">
+                                <summary class="tp-summary">Voir les détails</summary>
+                                <div class="tp-content">
+                                    <h4>Objectifs pédagogiques :</h4>
+                                    <ul class="tp-list">
+                                        <li>Comprendre l'architecture du domaine Active Directory</li>
+                                        <li>Gérer les utilisateurs, groupes et unités d'organisation</li>
+                                        <li>Configurer et déployer les Stratégies de Groupe (GPO)</li>
+                                        <li>Implémenter les permissions d'accès réseau</li>
+                                        <li>Assurer la sécurité du domaine</li>
+                                    </ul>
+                                    <h4>Compétences couvertes :</h4>
+                                    <p>C1.1 - Gestion d'identités · C2.1 - Administration système · C3.1 - Sécurité des accès</p>
+                                </div>
+                            </details>
+                        </article>
+
+                        <!-- TP 2 : BIND -->
+                        <article class="tp-zone card" id="tp-bind">
+                            <h3 class="heading-3">BIND — Serveur DNS</h3>
+                            <p class="text-body">Installation et configuration d'un serveur DNS BIND sur Linux. Gestion des zones de résolution, enregistrements DNS et redondance.</p>
+                            <a href="../anex/PDF/TP_Bind.pdf" target="_blank" class="tp-link" title="Ouvrir le document">
+                                <i class="fas fa-external-link-alt"></i> Voir le document
+                            </a>
+                            <details class="tp-details">
+                                <summary class="tp-summary">Voir les détails</summary>
+                                <div class="tp-content">
+                                    <h4>Objectifs pédagogiques :</h4>
+                                    <ul class="tp-list">
+                                        <li>Déployer un serveur BIND autoritaire et récursif</li>
+                                        <li>Configurer les zones directes et inverses</li>
+                                        <li>Gérer les enregistrements (A, AAAA, MX, CNAME, NS, SOA)</li>
+                                        <li>Implémenter la redondance avec serveurs esclaves</li>
+                                        <li>Optimiser la mise en cache DNS</li>
+                                    </ul>
+                                    <h4>Compétences couvertes :</h4>
+                                    <p>C1.2 - Services réseau · C2.2 - Configuration DNS · C3.2 - Disponibilité des services</p>
+                                </div>
+                            </details>
+                        </article>
+
+                        <!-- TP 3 : OSPF-HSRP -->
+                        <article class="tp-zone card" id="tp-ospf">
+                            <h3 class="heading-3">OSPF & HSRP</h3>
+                            <p class="text-body">Protocoles de routage dynamique OSPF et protocole de redondance HSRP. Optimisation des chemins de communication et haute disponibilité.</p>
+                            <a href="../anex/PDF/06_Exolab-OSPF-HSRP.pdf" target="_blank" class="tp-link" title="Ouvrir le document">
+                                <i class="fas fa-external-link-alt"></i> Voir le document
+                            </a>
+                            <details class="tp-details">
+                                <summary class="tp-summary">Voir les détails</summary>
+                                <div class="tp-content">
+                                    <h4>Objectifs pédagogiques :</h4>
+                                    <ul class="tp-list">
+                                        <li>Configurer le routage OSPF multi-zones</li>
+                                        <li>Optimiser les coûts de liens (métriques)</li>
+                                        <li>Implémenter la redondance réseau avec HSRP</li>
+                                        <li>Gérer les VIP (Virtual IP addresses)</li>
+                                        <li>Valider la convergence réseau</li>
+                                    </ul>
+                                    <h4>Compétences couvertes :</h4>
+                                    <p>C1.3 - Architecture réseau · C2.3 - Protocoles de routage · C3.3 - Haute disponibilité</p>
+                                </div>
+                            </details>
+                        </article>
+
+                        <!-- TP 4 : ROUNDCUBE -->
+                        <article class="tp-zone card" id="tp-roundcube">
+                            <h3 class="heading-3">Roundcube — Webmail</h3>
+                            <p class="text-body">Déploiement d'une solution webmail Roundcube avec support IMAP/SMTP. Gestion des contacts, calendriers et sécurisation de l'accès.</p>
+                            <a href="../anex/PDF/TP_RoundCube.pdf" target="_blank" class="tp-link" title="Ouvrir le document">
+                                <i class="fas fa-external-link-alt"></i> Voir le document
+                            </a>
+                            <details class="tp-details">
+                                <summary class="tp-summary">Voir les détails</summary>
+                                <div class="tp-content">
+                                    <h4>Objectifs pédagogiques :</h4>
+                                    <ul class="tp-list">
+                                        <li>Installer et configurer Roundcube</li>
+                                        <li>Intégrer les serveurs IMAP et SMTP</li>
+                                        <li>Gérer les identités et signatures</li>
+                                        <li>Configurer les dossiers et filtres</li>
+                                        <li>Implémenter le chiffrement SSL/TLS</li>
+                                    </ul>
+                                    <h4>Compétences couvertes :</h4>
+                                    <p>C1.4 - Services de messagerie · C2.4 - Configuration webmail · C3.4 - Sécurité des flux</p>
+                                </div>
+                            </details>
+                        </article>
+
+                        <!-- TP 5 : APACHE -->
+                        <article class="tp-zone card" id="tp-apache">
+                            <h3 class="heading-3">Apache — Serveur Web</h3>
+                            <p class="text-body">Configuration d'Apache, virtualisation de sites, SSL/TLS, modules de sécurité et optimisation des performances web.</p>
+                            <a href="../anex/PDF/TP_Apache.pdf" target="_blank" class="tp-link" title="Ouvrir le document">
+                                <i class="fas fa-external-link-alt"></i> Voir le document
+                            </a>
+                            <details class="tp-details">
+                                <summary class="tp-summary">Voir les détails</summary>
+                                <div class="tp-content">
+                                    <h4>Objectifs pédagogiques :</h4>
+                                    <ul class="tp-list">
+                                        <li>Installer et configurer Apache 2.4</li>
+                                        <li>Créer des hôtes virtuels (VirtualHost)</li>
+                                        <li>Implémenter HTTPS et certificats SSL/TLS</li>
+                                        <li>Configurer les modules de sécurité (mod_ssl, mod_security)</li>
+                                        <li>Optimiser les performances et la mise en cache</li>
+                                    </ul>
+                                    <h4>Compétences couvertes :</h4>
+                                    <p>C1.5 - Services web · C2.5 - Configuration Apache · C3.5 - Sécurité web</p>
+                                </div>
+                            </details>
+                        </article>
+
+                        <!-- TP 6 : Autres TPs -->
+                        <article class="tp-zone card highlight" id="tp-autres">
+                            <h3 class="heading-3">Compétences Transversales</h3>
+                            <p class="text-body">Scripts d'administration, gestion de services, monitoring système, bonnes pratiques de sécurité et optimisation réseau.</p>
+                            <details class="tp-details">
+                                <summary class="tp-summary">Voir les détails</summary>
+                                <div class="tp-content">
+                                    <h4>Domaines couverts :</h4>
+                                    <ul class="tp-list">
+                                        <li>Scripts Bash et PowerShell pour l'automatisation</li>
+                                        <li>Gestion des services Linux et Windows</li>
+                                        <li>Monitoring avec Prometheus et Grafana</li>
+                                        <li>Sauvegardes et restauration de données</li>
+                                        <li>Sécurité réseau et pare-feu</li>
+                                    </ul>
+                                    <h4>Compétences couvertes :</h4>
+                                    <p>C2.1 à C3.5 - Ensemble des compétences transversales BTS SIO SISR</p>
+                                </div>
+                            </details>
+                        </article>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="main-footer p-2">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-section about">
+                        <h4>À propos</h4>
+                    </div>
+                    <div class="footer-section follow">
+                        <h4>Suivez-moi</h4>
+                        <div class="social-links">
+                            <a href="https://github.com/jpmak6" class="social-link" target="_blank"><i class="fab fa-github"></i></a>
+                            <a href="https://www.linkedin.com/in/jean-makongue-a13b42223" class="social-link" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p class="text-body">© 2024 Mon Portfolio. Tous droits réservés.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
+    <script src="../file_js/nav.js"></script>
+    <script src="../file_js/type.js"></script>
+</body>
+</html>

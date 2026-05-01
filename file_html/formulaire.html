@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire de Contact</title>
+    <link rel="stylesheet" href="../file_css/style-mobile.css">
+    <link rel="stylesheet" href="../file_css/formulaire.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="overlay">
+        <header class="hero-header">
+            <nav class="nav-container">
+                <div class="container">
+                    <a href="portfolio.html" class="nav-logo">
+                        <span class="logo-text">Portfolio</span>
+                    </a>
+                    <div class="nav-links">
+                        <a href="portfolio.html" class="nav-item">Accueil</a>
+                        <a href="TP.html" class="nav-item">TP</a>
+                        <a href="infrastructure_reseau.html" class="nav-item">Infrastructure Réseau</a>
+                        <a href="projet.html" class="nav-item">Projets</a>
+                        <a href="situation_pro.html" class="nav-item">Situation pro</a>
+                        <a href="veille techno.html" class="nav-item">Veille Tech</a>
+                    </div>
+                    <button class="nav-toggle" aria-label="toggle navigation">
+                        <span class="hamburger"></span>
+                    </button>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <div class="main-wrapper">
+                <section id="contact" class="contact-section p-3">
+                    <div class="container">
+                        <h2 class="heading-2">Me Contacter</h2>
+                        <p class="contact-intro text-body">N'hésitez pas à me contacter pour toute opportunité de stage, projet ou collaboration.</p>
+                        
+                        <div class="contact-cards">
+                            <div class="contact-card copyable" data-copy="jpmakongue300@gmail.com" title="Cliquez pour copier">
+                                <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                                <h3 class="heading-3">Email</h3>
+                                <span class="contact-link" style="cursor: pointer;">jpmakongue300@gmail.com</span>
+                                <p class="contact-description">Réponse sous 24h</p>
+                            </div>
+
+                            <div class="contact-card copyable" data-copy="+33673681104" title="Cliquez pour copier">
+                                <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                                <h3 class="heading-3">Téléphone</h3>
+                                <span class="contact-link" style="cursor: pointer;">+33 6 73 68 11 04</span>
+                                <p class="contact-description">Disponible du lundi au vendredi</p>
+                            </div>
+
+                            <div class="contact-card">
+                                <div class="contact-icon"><i class="fab fa-linkedin"></i></div>
+                                <h3 class="heading-3">LinkedIn</h3>
+                                <a class="contact-link" href="https://www.linkedin.com/in/jean-makongue-a13b42223" target="_blank" rel="noopener">jean-makongue</a>
+                                <p class="contact-description">Connectez-moi sur LinkedIn</p>
+                            </div>
+
+                            <div class="contact-card">
+                                <div class="contact-icon"><i class="fab fa-github"></i></div>
+                                <h3 class="heading-3">GitHub</h3>
+                                <a class="contact-link" href="https://github.com/jpmak6" target="_blank" rel="noopener">github.com/jpmak6</a>
+                                <p class="contact-description">Consultez mes projets</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <footer class="main-footer p-2">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-section about">
+                        <h4>À propos</h4>
+                       
+                    
+                    <div class="footer-section follow">
+                        <h4>Suivez-moi</h4>
+                        <div class="social-links">
+                            <a href="https://github.com/jpmak6" class="social-link" target="_blank"><i class="fab fa-github"></i></a>
+                            <a href="https://www.linkedin.com/in/jean-makongue-a13b42223" class="social-link" target="_blank"><i class="fab fa-linkedin"></i></a>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p class="text-body">© 2024 Mon Portfolio. Tous droits réservés.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
+    <script src="../file_js/nav.js"></script>
+    <script src="../file_js/type.js"></script>
+    <script>
+        // Copier au presse-papier
+        document.querySelectorAll('.contact-card.copyable').forEach(card => {
+            card.addEventListener('click', async () => {
+                const textToCopy = card.getAttribute('data-copy');
+                try {
+                    await navigator.clipboard.writeText(textToCopy);
+                    // Feedback visuel
+                    const originalText = card.querySelector('.heading-3').textContent;
+                    card.querySelector('.heading-3').textContent = '✓ Copié!';
+                    setTimeout(() => {
+                        card.querySelector('.heading-3').textContent = originalText;
+                    }, 2000);
+                } catch (err) {
+                    console.error('Erreur lors de la copie:', err);
+                }
+            });
+        });
+    </script>
