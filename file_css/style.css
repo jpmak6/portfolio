@@ -94,7 +94,8 @@ body {
 }
 
 .nav-logo:hover .logo-text {
-    text-shadow: 0 0 10px rgba(52, 152, 219, 0.5);
+    text-shadow: none;
+    opacity: 0.92;
 }
 
 /* Typography System */
@@ -401,42 +402,36 @@ body {
     display: flex;
     align-items: center;
     position: relative;
-    transition: all 0.3s ease;
+    border-bottom: 2px solid transparent;
+    transition: color 0.2s ease, border-color 0.2s ease, opacity 0.2s ease;
 }
 
 .nav-item::before {
-    content: '';
-    position: absolute;
-    bottom: -5px;
-    left: 50%;
-    width: 0;
-    height: 2px;
-    background: var(--accent-color);
-    border-radius: 1px;
-    transform: translateX(-50%);
-    transition: width 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    display: none;
 }
 
 .nav-item:hover::before {
-    width: 100%;
+    display: none;
 }
 
 .nav-item:hover {
-    color: var(--accent-color);
-    transform: scale(1.05);
+    color: var(--light-color);
+    border-bottom-color: rgba(236, 240, 241, 0.45);
+    opacity: 0.92;
+    transform: none;
 }
 
 /* ...existing code... */
 
 .nav-item.active {
-    color: var(--accent-color);
-    font-weight: 500;
-    letter-spacing: 0.05em;
+    color: var(--light-color);
+    font-weight: 600;
+    letter-spacing: 1px;
+    border-bottom-color: var(--accent-color);
 }
 
 .nav-item.active::before {
-    width: 100%;
-    transition: none;
+    display: none;
 }
 
 .nav-item.active::after {

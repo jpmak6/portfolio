@@ -283,7 +283,7 @@ body {
     font-family: 'Poppins', sans-serif;
     font-size: 1.4rem;
     font-weight: 500;
-    transition: all 0.3s ease;
+    transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease, opacity 0.2s ease;
     position: relative;
     padding: 1rem 2rem;
     border-radius: 10px;
@@ -291,17 +291,20 @@ body {
     max-width: 300px;
     text-align: center;
     background: rgba(255, 255, 255, 0.05);
+    border: 1px solid transparent;
 }
 
 .nav-item:active {
-    transform: scale(0.95);
+    transform: none;
 }
 
 .nav-item.active,
 .nav-item:hover {
-    color: white;
-    background: linear-gradient(135deg, var(--secondary-color), var(--accent-color));
-    box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
+    color: var(--light-color);
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(236, 240, 241, 0.14);
+    box-shadow: none;
+    opacity: 0.95;
 }
 
 /* ============================================
